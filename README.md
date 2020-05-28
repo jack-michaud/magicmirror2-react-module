@@ -2,7 +2,7 @@
 
 A small demo of a module written in React.
 
-![Demo](https://raw.githubusercontent.com/jack-michaud/magicmirror2-react-module/master/data/demo.gif)
+![Demo](https://github.com/jack-michaud/magicmirror2-react-module/raw/master/docs/demo.gif)
 
 ## Features
 - 🔥 Hot Module Reloading (HMR)
