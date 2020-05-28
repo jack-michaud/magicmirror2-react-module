@@ -15,6 +15,11 @@ module.exports = {
     contentBase: path.resolve(__dirname, 'dist'),
     publicPath: '/modules/' + path.basename(__dirname) + '/',
 
+    overlay: {
+      errors: true
+    },
+    open: true,
+
     // For proxying everything to existing backend
     index: '',
     proxy: {
