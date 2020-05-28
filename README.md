@@ -13,7 +13,7 @@ A small demo of a module written in React.
 ## Why?
 
 Instead of re-writing [MagicMirror^2](https://github.com/MichMich/MagicMirror) in React,
-it made my sense to me to hook into the existing module system and write a react module.
+it made more sense to me to hook into the existing module system and write a react module.
 
 # Forking for development
 
