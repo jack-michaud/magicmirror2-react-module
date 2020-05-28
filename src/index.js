@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App.jsx';
 
+import ModuleContext from './contexts/module';
+
 Module.register('reactTest', {
   getStyles() {
     return ['react.css'];
@@ -16,7 +18,12 @@ Module.register('reactTest', {
 
     if (!this.renderedReact) {
       this.renderedReact = true;
-      ReactDOM.render(<App/>, root);
+      ReactDOM.render(
+        <ModuleContext.Provider value={this}>
+          <App/>
+        </ModuleContext.Provider>,
+        root
+      );
     }
 
     return root;

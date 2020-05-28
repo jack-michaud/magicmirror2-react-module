@@ -7,6 +7,7 @@ A small demo of a module written in React.
 ## Features
 - 🔥 Hot Module Reloading (HMR)
 - 🗲 JSX rendering with Babel and Webpack
+- 🧲 Get the vanilla MM module's `this` in a context for easy access to the module configuration
 - ⚓ Standalone mode (build your plugin for release without worrying about running webpack dev server)
 
 ## Why?
@@ -76,4 +77,45 @@ This creates a javascript file named after the module's folder name. Once
 you've done this, the module is standalone.
 
 
+# Getting the module context
 
+If you need to access the module's configuration or other info, you can easily do so with the 
+provided context!
+
+```javascript
+import React, { useContext } from 'react';
+import ModuleContext from './contexts/module';
+
+/*
+ * Shows the name of the module proudly!
+ */
+const ModuleNameDisplay = () => {
+ const module = useContext(ModuleContext);
+ return (
+   <div>
+     { module.name }
+   </div>
+ )
+}
+
+/*
+ * Shows a special property of the module!
+ * e.g. if our module config looks something like this:
+ * {
+ *   module: 'modulename',
+ *   position: 'bottom_bar',
+ *   config: {
+ *     text: 'Hello!'
+ *   }
+ * }
+ */
+const ModuleTextDisplay = () => {
+ const module = useContext(ModuleContext);
+ return (
+   <div>
+     { module.config.text }
+   </div>
+ )
+}
+
+```
