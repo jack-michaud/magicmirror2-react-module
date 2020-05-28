@@ -1,12 +1,13 @@
+import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App.jsx';
 
 Module.register('reactTest', {
-	getStyles: function () {
-		return ['react.css'];
-	},
+  getStyles() {
+    return ['react.css'];
+  },
   renderedReact: false, // On first DOM render, this will be true
-  getDom: function () {
+  getDom() {
     const root = document.createElement('div');
     const root_id = `${this.name}-react-root`;
 
