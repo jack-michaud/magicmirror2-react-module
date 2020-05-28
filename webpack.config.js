@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   entry: ['react-hot-loader/patch', './src/index.js'],
@@ -47,5 +48,10 @@ module.exports = {
         }
       },
     ]
-  }
+  },
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env.MODULE_NAME': JSON.stringify(path.basename(__dirname))
+    })
+  ]
 }

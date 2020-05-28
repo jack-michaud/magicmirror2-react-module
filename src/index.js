@@ -4,7 +4,7 @@ import App from './App.jsx';
 
 import ModuleContext from './contexts/module';
 
-Module.register('reactTest', {
+Module.register(process.env.MODULE_NAME, {
   getStyles() {
     return ['react.css'];
   },
