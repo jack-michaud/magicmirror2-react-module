@@ -3,8 +3,8 @@ import React from 'react';
 
 const App = () => {
   return (
-    <div className="gradient fixed w-full inset-x-0 bottom-0 text-black">
-      Test
+    <div className="gradient">
+      React Starter!
     </div>
   )
 };
