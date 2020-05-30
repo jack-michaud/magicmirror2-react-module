@@ -6,8 +6,10 @@ import ModuleContext from './contexts/module';
 const App = () => {
   const module = useContext(ModuleContext);
   return (
-    <div className="gradient">
-      React Starter: { module.name }
+    <div className="fixed gradient inset-x-0 bottom-0 uppercase text-black" style={{height: '1.5in'}}>
+      <div className="flex items-center justify-center h-full">
+        Family Home
+      </div>
     </div>
   )
 };
