@@ -8,7 +8,7 @@ const App = () => {
   return (
     <div className="fixed gradient inset-x-0 bottom-0 uppercase text-black" style={{height: '1.4in'}}>
       <div className="flex items-center justify-center h-full">
-        Family Home
+        Family Home {{ module.config.version }}
       </div>
     </div>
   )
